@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/underline01.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <p>
+                    <label for="numero_tabuada">Número</label>
+                    <input type="number" name="numero_tabuada" id="numero_tabuada" placeholder="Digite um número">
+                    <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+                </p>
+            </div>
+            <div class="bloco-resultado">
+                <select name="tabuada" id="seltab" class="resultado" size="10">
+                    <option>Gerando tabuada...</option>
+                </select>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><a href="https://github.com/Cristhianstevs" target="_blank" class="animated-underline-01">@ Cristhianstevs</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
