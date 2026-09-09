@@ -55,15 +55,15 @@ header {
 /* === MAIN === */
 main {
   display: grid;
-  grid-template-columns: auto 90vw auto;
+  grid-template-columns: 20px auto 20px;
   margin-top: 20px;
-  gap: 20px;
 }
 #ficha {
   background-color: var(--fundo-card);
   padding: 20px;
   border-radius: 5px;
   grid-column: 2;
+  margin-bottom: 20px;
 }
 #ficha .foto {
   width: 200px;
@@ -97,4 +97,26 @@ main {
 }
 #ficha #social a:hover {
   color: var(--destaque-inverso);
+}
+
+/* === DETALHES === */
+
+#detalhes {
+  grid-column: 2;
+}
+#detalhes article {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+#detalhes article h2 {
+  color: var(--destaque);
+  margin-bottom: 20px;
+}
+#video {
+}
+#video > iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
