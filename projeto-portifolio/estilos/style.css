@@ -7,6 +7,14 @@
   --destaque-inverso: #66bbff;
   --fundo-card: #fff;
 }
+body.escuro {
+  --fundo-principal: #222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444;
+}
 
 /* === RESET === */
 * {
@@ -21,6 +29,9 @@ body {
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 /* === HEADER === */
@@ -64,7 +75,7 @@ main {
 #ficha {
   background-color: var(--fundo-card);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   grid-column: 2;
   margin-bottom: 20px;
 }
@@ -210,6 +221,7 @@ main {
   border-radius: 8px;
 }
 
+/* FOOTER */
 footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
@@ -226,7 +238,20 @@ footer a:hover {
   color: var(--destaque-inverso);
 }
 
+/* MEDIA QUERY */
 @media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: 20px 300px 20px 1fr 20px;
+  }
+  section#ficha {
+    grid-column: 2/3;
+    height: fit-content;
+    position: sticky;
+    top: calc(44px + 20px);
+  }
+  section#detalhes {
+    grid-column: 4/-2;
+  }
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
